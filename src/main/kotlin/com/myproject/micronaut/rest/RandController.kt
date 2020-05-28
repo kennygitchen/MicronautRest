@@ -23,7 +23,6 @@ class RandController {
     @Produces(MediaType.TEXT_PLAIN)
     fun rand(): Double {
         var random = 0.0
-        LOG.info("Request Received")
         val taken = measureNanoTime {
             random = genNum()
         }
@@ -32,9 +31,9 @@ class RandController {
     }
 
     private fun genNum(): Double {
-        var num = 0.0
-        for (n in 1..1000) {
-            num += Math.random()
+        var num = Math.random()
+        for (n in 1..10000000) {
+            num += 1
         }
         return num
     }
