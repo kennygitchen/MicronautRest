@@ -6,7 +6,6 @@ import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Produces
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import java.time.LocalDateTime
 import kotlin.system.measureNanoTime
 
 
@@ -32,9 +31,9 @@ class RandController {
         return random
     }
 
-    fun genNum(): Double {
+    private fun genNum(): Double {
         var num = 0.0
-        for(n in 1..1000) {
+        for (n in 1..1000) {
             num += Math.random()
         }
         return num
