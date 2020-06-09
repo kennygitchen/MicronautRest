@@ -6,3 +6,6 @@ steps:
     args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/micronaut-rest', '.' ]
 images:
   - 'gcr.io/$PROJECT_ID/micronaut-rest'
+options:
+  machineType: 'N1_HIGHCPU_8'
+  diskSizeGb: 50
