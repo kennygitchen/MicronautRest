@@ -31,10 +31,6 @@ class RandController {
     }
 
     private fun genNum(): Double {
-        var num = Math.random()
-        for (n in 1..10000000) {
-            num += 1
-        }
-        return num
+        return Math.random()
     }
 }
