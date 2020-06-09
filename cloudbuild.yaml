@@ -6,5 +6,5 @@ steps:
 images:
   - 'gcr.io/$PROJECT_ID/micronaut-rest'
 options:
-  machineType: 'N1_HIGHCPU_8'
-  diskSizeGb: 200
+  machineType: 'N1_HIGHCPU_32'
+  diskSizeGb: 100
