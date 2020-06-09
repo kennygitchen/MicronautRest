@@ -1,6 +1,6 @@
 package com.myproject.micronaut.rest
 
-import io.kotlintest.shouldBe
+import io.kotlintest.shouldNotBe
 import io.kotlintest.specs.BehaviorSpec
 import io.micronaut.test.annotation.MicronautTest
 
@@ -12,7 +12,7 @@ class RandControllerTest(
         `when`("the service is called with /rand") {
             val result = restController.rand()
             then("there should no error/excepton") {
-                result shouldBe null
+                result shouldNotBe null
             }
         }
     }
