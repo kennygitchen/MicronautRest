@@ -6,7 +6,7 @@ RUN gu install native-image
 COPY . /home/app/MicronautRest
 WORKDIR /home/app/MicronautRest
 
-RUN native-image J-Xmx8G -J-Xms2G --no-server -cp build/libs/MicronautRest-*-all.jar
+RUN native-image -J-Xmx8G -J-Xms2G --no-server -cp build/libs/MicronautRest-*-all.jar
 
 FROM frolvlad/alpine-glibc
 RUN apk update && apk add libstdc++
