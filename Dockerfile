@@ -1,7 +1,6 @@
 #FROM oracle/graalvm-ce:20.0.0-java8 as graalvm
 # For JDK 11
 FROM oracle/graalvm-ce:20.0.0-java11 as graalvm
-RUN free -m
 RUN gu install native-image
 
 COPY . /home/app/MicronautRest
