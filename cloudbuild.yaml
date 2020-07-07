@@ -20,6 +20,7 @@ steps:
       - 'asia-east1'
       - '--platform'
       - 'managed'
+      - '--allow-unauthenticated'
 
 images:
   - 'gcr.io/$PROJECT_ID/micronaut-rest'
