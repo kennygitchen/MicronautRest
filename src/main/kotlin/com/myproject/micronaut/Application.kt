@@ -7,8 +7,9 @@ object Application {
     @JvmStatic
     fun main(args: Array<String>) {
         Micronaut.build()
-                .packages("com.myproject.micronaut")
-                .mainClass(Application.javaClass)
-                .start()
+            .packages("com.myproject.micronaut")
+            .eagerInitConfiguration(true)
+            .mainClass(Application.javaClass)
+            .start()
     }
 }
